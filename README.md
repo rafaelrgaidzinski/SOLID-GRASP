@@ -155,9 +155,9 @@ Aqui está a explicação revisada, organizada e pronto para um **README**, com 
 
 ***
 
-# Indirection (Indireção) — GRASP
+## 3. Indirection (Indireção) — GRASP
 
-## O que é Indirection?
+### O que é Indirection?
 
 O padrão **Indirection** propõe a introdução de um objeto intermediário que atua como mediador entre dois ou mais componentes do sistema que, sem esse intermediário, se comunicariam diretamente. O objetivo principal é **reduzir o acoplamento** — ou seja, diminuir o quanto uma parte do sistema depende diretamente de outra.  
 Esse desacoplamento facilita a manutenção, o reuso de código e torna o sistema mais robusto diante de mudanças, já que alterações em um componente tendem a afetar apenas o intermediário e não todo o sistema.[1][4][5]
@@ -167,7 +167,7 @@ Esse desacoplamento facilita a manutenção, o reuso de código e torna o sistem
 
 ***
 
-## Exemplo Prático: Sistema de Pagamento
+### Exemplo Prático: Sistema de Pagamento
 
 Suponha um aplicativo de loja online que processa pagamentos via diferentes gateways.
 
@@ -208,7 +208,7 @@ Agora, a classe `Cart` não precisa conhecer os detalhes de como o pagamento é 
 
 ***
 
-## Quando aplicar Indirection?
+### Quando aplicar Indirection?
 
 - Quando dois componentes precisam se comunicar, mas existe possibilidade de mudança futura em algum deles
 - Para facilitar testes, manutenção ou reuso
@@ -221,7 +221,7 @@ Agora, a classe `Cart` não precisa conhecer os detalhes de como o pagamento é 
 
 ***
 
-## Diferença: Indirection (GRASP) vs. Inversão de Dependência (SOLID)
+### Diferença: Indirection (GRASP) vs. Inversão de Dependência (SOLID)
 
 ### Indirection (GRASP)
 - Foca em introduzir um intermediário para reduzir acoplamento direto entre componentes
@@ -256,7 +256,7 @@ Neste modelo, o `PaymentService` depende da abstração `PaymentGateway`, e não
 
 ***
 
-## Resumindo
+### Resumindo
 
 - **Indirection:** Cria um objeto intermediário para mediar comunicação, diminuir acoplamento e facilitar manutenção.
 - **Inversão de Dependência:** Garante que componentes dependam de abstrações, não de construções concretas, aumentando flexibilidade e permitindo trocas com impacto mínimo.[1][4][5]
