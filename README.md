@@ -160,10 +160,10 @@ Aqui está a explicação revisada, organizada e pronto para um **README**, com 
 ### O que é Indirection?
 
 O padrão **Indirection** propõe a introdução de um objeto intermediário que atua como mediador entre dois ou mais componentes do sistema que, sem esse intermediário, se comunicariam diretamente. O objetivo principal é **reduzir o acoplamento** — ou seja, diminuir o quanto uma parte do sistema depende diretamente de outra.  
-Esse desacoplamento facilita a manutenção, o reuso de código e torna o sistema mais robusto diante de mudanças, já que alterações em um componente tendem a afetar apenas o intermediário e não todo o sistema.[1][4][5]
+Esse desacoplamento facilita a manutenção, o reuso de código e torna o sistema mais robusto diante de mudanças, já que alterações em um componente tendem a afetar apenas o intermediário e não todo o sistema.
 
 > **Exemplo conceitual:**  
-> Imagine duas classes: `Cliente` (A) e `Serviço` (B). Se a classe `Cliente` chama diretamente métodos da classe `Serviço`, as duas ficam fortemente acopladas. Com Indirection, criamos uma classe intermediária (C) para ser responsável por essa comunicação; agora `Cliente` fala com C, e C fala com `Serviço`.[4][1]
+> Imagine duas classes: `Cliente` (A) e `Serviço` (B). Se a classe `Cliente` chama diretamente métodos da classe `Serviço`, as duas ficam fortemente acopladas. Com Indirection, criamos uma classe intermediária (C) para ser responsável por essa comunicação; agora `Cliente` fala com C, e C fala com `Serviço`.
 
 ***
 
@@ -215,9 +215,9 @@ Agora, a classe `Cart` não precisa conhecer os detalhes de como o pagamento é 
 - Quando é necessário incluir regras (validação, log, controle de acesso) entre uma chamada e o componente final
 
 **Exemplos clássicos:**  
-- **MVC:** O controller faz mediação entre view e model, evitando acoplamento direto.[6][1]
-- **Repositórios:** Um repository intermedia o acesso entre domínio e a persistência.[5]
-- **Adaptadores:** Um adapter traduz chamadas entre sistemas distintos, desacoplando-os.[5]
+- **MVC:** O controller faz mediação entre view e model, evitando acoplamento direto.
+- **Repositórios:** Um repository intermedia o acesso entre domínio e a persistência.
+- **Adaptadores:** Um adapter traduz chamadas entre sistemas distintos, desacoplando-os.
 
 ***
 
@@ -225,7 +225,7 @@ Agora, a classe `Cart` não precisa conhecer os detalhes de como o pagamento é 
 
 ### Indirection (GRASP)
 - Foca em introduzir um intermediário para reduzir acoplamento direto entre componentes
-- Concentra a roteirização e delegação das responsabilidades[1][4]
+- Concentra a roteirização e delegação das responsabilidades
 
 ### Inversão de Dependência (DI - SOLID)
 - Recomenda que componentes dependam de *abstrações* (interfaces), nunca de implementações concretas
@@ -252,13 +252,13 @@ class PaymentService {
   }
 }
 ```
-Neste modelo, o `PaymentService` depende da abstração `PaymentGateway`, e não de implementações específicas. Isso facilita testes, substituições e evolução do sistema.[4][1]
+Neste modelo, o `PaymentService` depende da abstração `PaymentGateway`, e não de implementações específicas. Isso facilita testes, substituições e evolução do sistema.
 
 ***
 
 ### Resumindo
 
 - **Indirection:** Cria um objeto intermediário para mediar comunicação, diminuir acoplamento e facilitar manutenção.
-- **Inversão de Dependência:** Garante que componentes dependam de abstrações, não de construções concretas, aumentando flexibilidade e permitindo trocas com impacto mínimo.[1][4][5]
+- **Inversão de Dependência:** Garante que componentes dependam de abstrações, não de construções concretas, aumentando flexibilidade e permitindo trocas com impacto mínimo.
 
 ***
